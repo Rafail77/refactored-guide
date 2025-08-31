@@ -1,4 +1,20 @@
-       .container {
+.block-example {
+    display: block;                      /* элемент занимает всю ширину, начинается с новой строки */
+    background-color: lightcoral;      /* фон для наглядности */
+    padding: 10px;                       /* внутренние отступы */
+    margin-bottom: 20px;                 /* отступ снизу */
+    border: 2px solid darkred;         /* рамка для наглядности */
+}
+
+.inline-example {
+    display: inline;                     /* элемент занимает ширину содержимого, остаётся в строке */
+    background-color: lightgreen;      /* фон для наглядности */
+    padding: 10px;                       /* внутренние отступы (вертикальные частично не влияют на поток) */
+    margin-right: 10px;                  /* отступ справа, чтобы элементы не прилипали друг к другу */
+    border: 2px dashed darkgreen;      /* пунктирная рамка для наглядности */
+}
+
+.container {
     display: flex;                          /* Включаем Flexbox для контейнера */
     flex-direction: row;                    /* Элементы располагаются в строку (горизонтально) */
     justify-content: space-between;         /* Равномерно распределяем элементы по ширине */
@@ -41,13 +57,14 @@
 
 .container3 {
     display: flex;                          /* Flexbox */
-    flex-wrap: wrap;                        /* Элементы будут переноситься на новую строку */
-    justify-content: flex-start;            /* Выравнивание слева */
-    align-items: flex-start;                /* Прижаты к верху */
+    flex-wrap: wrap;                        /* Перенос на новую строку */
+    justify-content: flex-start;            /* Горизонтально прижаты к началу */
+    align-content: space-between;           /* Вертикальное распределение рядов */
     border: 2px dashed gray;              /* Пунктирная рамка */
     padding: 15px;                          /* Внутренний отступ */
     margin: 20px 0;                         /* Внешний отступ */
     background-color: #ffe6e6;            /* Светло-розовый фон */
+    height: 400px;                          /* ВАЖНО: задаём высоту контейнера, чтобы появилось свободное место */
 }
 
 .container4 {
@@ -59,6 +76,57 @@
     padding: 15px;                          /* Внутренний отступ */
     margin: 20px 0;                         /* Внешний отступ */
     background-color: #e6e6ff;            /* Светло-фиолетовый фон */
+}
+
+.container5 {
+    display: flex;                        /* Включаем flexbox для контейнера */
+    border: 2px dashed gray;            /* Пунктирная рамка для наглядности */
+    padding: 15px;                        /* Внутренний отступ */
+    margin: 20px 0;                       /* Внешние отступы */
+    background-color: #e6ffe6;            /* Светло-зелёный фон для отличия */
+}
+
+.item1 {
+    flex: 0 0 50%;                         /* Не растягивается (grow=0), не сжимается (shrink=0),  
+                                             фиксированная база = 50% ширины контейнера */
+    background-color: lightcoral;        /* Красный фон для наглядности */
+}
+
+.item2 {
+    flex: 1 1 auto;                         /* Растягивается (grow=1), может сжиматься (shrink=1),
+                                             ширина автоматически подстраивается */
+    background-color: lightblue;          /* Голубой фон для наглядности */
+}
+
+.item3 {
+    flex: 0 0 100px;                      /* Grow=0 → не растёт, Shrink=0 → не сжимается,
+                                             База всегда = 100px */
+    background-color: lightgoldenrodyellow;/* Жёлтый фон для наглядности */
+}
+
+.nav-container {
+    display: flex;                       /* Включаем flexbox */
+    justify-content: center;             /* Горизонтальное выравнивание по центру */
+    align-items: center;                 /* Вертикальное выравнивание по центру (по высоте строки) */
+    gap: 30px;                           /* Расстояние между ссылками */
+    padding: 15px;                       /* Внутренние отступы у контейнера */
+    background-color: #333;            /* Тёмный фон для меню */
+    border: 2px dashed gray;           /* Пунктирная рамка для наглядности */
+}
+
+.nav-container a {
+    color: white;                      /* Белый цвет текста */
+    text-decoration: none;               /* Убираем подчёркивание у ссылок */
+    font-family: Roboto, sans-serif;     /* Читаемый шрифт */
+    font-size: 18px;                     /* Размер текста */
+    padding: 8px 12px;                   /* Внутренние отступы (кликабельная зона больше) */
+    background-color: #555;            /* Серый фон ссылок */
+    border-radius: 5px;                  /* Слегка скругляем углы */
+    transition: background-color 0.3s;   /* Плавный переход при наведении */
+}
+
+.nav-container a:hover {
+    background-color: #777;            /* Более светлый фон при наведении */
 }
 
 

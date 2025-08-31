@@ -4,13 +4,20 @@
 <head>
    <meta charset="UTF-8"> <!-- Кодировка страницы: UTF-8, поддерживает все языки -->
    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Масштабирование для мобильных устройств -->
-   <title>Flexbox_4.4</title> <!-- Заголовок страницы (вкладка браузера) -->
+   <title>Homework for Lesson №19: “Flexbox”</title> <!-- Заголовок страницы (вкладка браузера) -->
 
    <link rel="stylesheet" href="styles.css"> <!-- Подключаем внешний CSS-файл -->
    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet"> <!-- Подключаем шрифты Google -->
 </head>
 
 <body>
+
+   <!-- Пример для сравнения block и inline -->
+<div class="block-example">block-element</div> <!-- занимает всю ширину, переносит следующий элемент вниз -->
+
+<div class="inline-example">inline element 1</div> <!-- занимает только ширину текста -->
+<div class="inline-example">inline element 2</div> <!-- стоит в одной строке рядом с первым -->
+<span class="inline-example">inline-span</span>   <!-- span тоже inline, добавлен для сравнения -->
 
    <!-- Первый контейнер (flex в строку) -->
    <div class="container">
@@ -55,6 +62,21 @@
        <div class="item"> Item δ. flex-flow: row wrap;</div>
        <div class="item"> Item ε. flex-flow: row wrap;</div>
    </div>
+
+   <!-- Шестой контейнер: распределение элементов 50% / авто / фиксированный -->
+   <div class="container5">
+  <div class="item item1">50%</div>       <!-- Первый блок: всегда занимает 50% -->
+  <div class="item item2">Auto</div>      <!-- Второй блок: растягивается на всё оставшееся место -->
+  <div class="item item3">100px</div>     <!-- Третий блок: фиксированная ширина 100px -->
+</div>
+
+<!-- Горизонтальное меню навигации -->
+<nav class="nav-container">
+  <a href="#">Home</a>        <!-- Первая ссылка -->
+  <a href="#">About Us</a>    <!-- Вторая ссылка -->
+  <a href="#">Услуги</a>      <!-- Третья ссылка -->
+  <a href="#">Contacts</a>    <!-- Четвёртая ссылка -->
+</nav>
 
 
 </body>
