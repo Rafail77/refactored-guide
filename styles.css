@@ -1,0 +1,29 @@
+       .container {
+    display: flex;                          /* Включаем Flexbox для контейнера */
+    flex-direction: row;                    /* Элементы располагаются в строку (горизонтально) */
+    justify-content: space-between;         /* Равномерно распределяем элементы по ширине */
+    align-items: center;                    /* Выравниваем элементы по центру по вертикали */
+    border: 2px dashed gray;                /* Рамка: 2px, пунктир, серый цвет */
+    padding: 15px;                          /* Внутренний отступ: расстояние между содержимым и рамкой */
+    margin: 20px 0;                         /* Отступ сверху и снизу */
+    background-color: #f0f8ff;              /* Светло-голубой фон (для наглядности контейнера) */
+}
+
+.item {
+    padding: 10px;                          /* Внутренний отступ у элемента */
+    border: solid 1px #000;                 /* Чёрная рамка вокруг элемента */
+    background-color: lightblue;            /* Фон самого элемента */
+}
+
+.container1 {
+    display: flex;                          /* Включаем Flexbox */
+    flex-direction: column;                 /* Элементы располагаются в колонку (вертикально) */
+    justify-content: space-between;         /* Распределяем элементы с равными промежутками */
+    align-items: center;                    /* Центрируем элементы по горизонтали */
+    border: 2px dashed gray;                /* Пунктирная рамка для наглядности */
+    padding: 15px;                          /* Внутренние отступы */
+    margin: 20px 0;                         /* Отступ сверху и снизу */
+    background-color: #fffacd;             /* Светло-жёлтый фон (отличается от первого контейнера) */
+}
+
+
