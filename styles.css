@@ -112,6 +112,7 @@
     padding: 15px;                       /* Внутренние отступы у контейнера */
     background-color: #333;            /* Тёмный фон для меню */
     border: 2px dashed gray;           /* Пунктирная рамка для наглядности */
+    margin-bottom: 20px;                 /* отступ снизу */
 }
 
 .nav-container a {
@@ -127,6 +128,30 @@
 
 .nav-container a:hover {
     background-color: #777;            /* Более светлый фон при наведении */
+}
+
+.gallery-container {
+    display: flex;                    /* Включаем flexbox */
+    flex-wrap: wrap;                  /* Разрешаем перенос карточек на новую строку */
+    justify-content: space-between;   /* Равномерно распределяем карточки по строке */
+    gap: 20px;                        /* Отступы между карточками */
+    padding: 20px;                    /* Внутренние отступы контейнера */
+    background-color: #f0f0f0;      /* Светло-серый фон для галереи */
+    border: 2px dashed gray;        /* Пунктирная рамка для наглядности */
+}
+
+.card {
+    flex: 1 1 30%;                        /* Короткая запись flex-grow:1; flex-shrink:1; flex-basis:30% */
+                                          /* 1 → карточка может увеличиваться, 
+                                             1 → карточка может уменьшаться,
+                                             30% → начальная ширина карточки */
+    background-color: white;            /* Белый фон карточки */
+    border: 1px solid #ccc;             /* Тонкая рамка */
+    padding: 15px;                        /* Внутренние отступы */
+    text-align: center;                   /* Выравнивание текста по центру */
+    font-family: Roboto, sans-serif;      /* Шрифт для текста */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Лёгкая тень для объёмности */
+    border-radius: 8px;                    /* Скруглённые углы */
 }
 
 
